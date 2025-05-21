@@ -1,10 +1,12 @@
 # 19CS301-Module-6
 EX: 6.1   POLYMORPHISM
 
-### AIM: To Create two specific classes- Beans and Mango. Along with that, create a generic function that tells us the type and color of the object we pass. Mind you, since we have passed only “obj” through it, this obj can be any object.
+### AIM: 
+To Create two specific classes- Beans and Mango. Along with that, create a generic function that tells us the type and color of the object we pass. Mind you, since we have passed only “obj” through it, this obj can be any object.
 
 
 ### ALGORITHM:
+
 Step1: create class Beans and def a function type and color
 
 Step 2: create a class Mango and def a function type and color
@@ -34,20 +36,24 @@ class Mango:
          func(obj_mango)
 ```
 ### OUTPUT:
-![image](https://github.com/user-attachments/assets/b41a3e12-896b-4f6c-a9b2-19045a5088f9)
+![image](https://github.com/gokulkrishnan2005/19CS301-Module-6/blob/main/20.png)
 
 
-### RESULT: Thus, the program has been successfully executed.
+### RESULT: 
+Thus, the program has been successfully executed.
 
 EXP.No: 6.b OPERATOR OVERLOADING
 
-### AIM: write a python program to overload less than operator
+### AIM:
+write a python program to overload less than operator
 ###ALGORITHM:
+
 Step1 :create class A and def init	 
 
 Step2: def it	with a condition if self.a < o.a 
 
 Step 3: call the function and execute the program.
+
 ### PROGRAM:
 ```
 class A :
@@ -62,17 +68,22 @@ ob1 = A(2)
 ob2 = A(3)
 print(ob1<ob2)
 ```
-###OUTPUT:
-![image](https://github.com/user-attachments/assets/dae03d17-1004-424e-a179-ef62fd2681bd)
+### OUTPUT:
+
+![image](https://github.com/gokulkrishnan2005/19CS301-Module-6/blob/main/21.png)
 
 
 
-###RESULT: Thus, the program has been successfully executed.
+### RESULT: 
+Thus, the program has been successfully executed.
+
 EX: 6.3 ABSTRACT CLASS METHOD
 
-### AIM: To Create the abstract method calculate_area which is of the abstract class 'Shape'
+### AIM:
+To Create the abstract method calculate_area which is of the abstract class 'Shape'
 
 ### ALGORITHM:
+
 Step1:Get input from the user
 
 Step2:put class function to define the function using self
@@ -99,33 +110,124 @@ a.calculate_area()
 b.calculate_area()
 ```
 ### OUTPUT:
-![image](https://github.com/user-attachments/assets/a4c70e22-b3e0-417a-86d7-41f547c9d60d)
+![image](https://github.com/gokulkrishnan2005/19CS301-Module-6/blob/main/22.png)
 
 
-### RESULT: Thus, the program has been successfully executed.
+### RESULT: 
+Thus, the program has been successfully executed.
 
 EXP.No: 6.4     ENCAPSULATION
-### AIM: To Implement Encapsulation using private members –of a class rectangle with private variables length,width.
-###ALGORITHM: Step1: put class function to define the function using self Step2: By using the function to find the area of the rectangle Step3: Execute the program.
-###PROGRAM:
+### AIM:
+To Implement Encapsulation using concepts to access the private variables in ABC class. 
+
+###ALGORITHM: 
+
+Define class ABC with a private variable __a.
+
+Create a constructor __init__() to initialize __a = 5.
+
+Define method fun() to print a public message.
+
+Define method fun1() to print a private message and the value of __a.
+
+Create object x of class ABC.
+
+Call x.fun() to execute the public method.
+
+Call x.fun1() to execute the method accessing the private variable.
+
+### PROGRAM:
 ```
-class Rectangle:
- 	length = 0
- 	breadth = 0
-  def	init	(self):
-       self.	length = 5
-       self.	breadth = 3
-  print(self.	length)
-  print(self.	breadth)
-rect = Rectangle()
+class ABC:
+    def __init__(self):
+        self.__a=5
+    def fun (self):
+        print("I am public class method")
+    def fun1(self):
+        print("I am private class method")
+        print(self.__a)
+x=ABC()
+x.fun()
+x.fun1()
 ```
 ### OUTPUT:
  
-![image](https://github.com/user-attachments/assets/ea434dc1-3f93-4a66-8828-1d815e9ff015)
+![image](https://github.com/gokulkrishnan2005/19CS301-Module-6/blob/main/23.png)
 
  
 
-### RESULT: Thus, the program has been successfully executed
+### RESULT:
+
+Thus, the program has been successfully executed
+
+EXP.No: 6.e ENCAPSULATION-PRIVATE MEMBERS
+
+### AIM:
+Create a Class  Student with the private members name and age ,Add getter and setter to initialize the age variable.
+
+
+### ALGORITHM:
+
+Start
+
+Define a class Student with:
+
+An initializer __init__ that takes name and age as parameters.
+
+Store name as a public attribute.
+
+Store age as a private attribute using self.__age.
+
+Define a getter method get_age() to return the value of __age.
+
+Define a setter method set_age(age) to update the value of __age.
+
+Create an instance of Student with name 'Jessa' and age 14.
+
+Use the get_age() method to retrieve and print the age.
+
+Use the set_age(16) method to update the age to 16.
+
+Again use get_age() to retrieve and print the updated age.
+
+End
+
+### PROGRAM:
+```
+class Student:
+    def __init__(self, name, age):
+        # private member
+        self.name = name
+        self.__age = age
+
+    # getter method
+    def get_age(self):
+        return self.__age
+
+    # setter method
+    def set_age(self, age):
+        self.__age = age
+
+# creating object
+stud = Student('Jessa', 14)
+
+# retrieving age using getter
+print('Name:', stud.name, 'Age:', stud.get_age())
+
+# changing age using setter
+stud.set_age(16)
+
+# retrieving age again using getter
+print('Name:', stud.name, 'Age:', stud.get_age())
+
+```
+### OUTPUT:
+![image](https://github.com/gokulkrishnan2005/19CS301-Module-6/blob/main/M6%20IMAGE.png)
+
+
+### RESULT: 
+Thus, the program has been successfully executed.
+
 
 
 
